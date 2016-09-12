@@ -1,0 +1,22 @@
+[user]
+	name = Kar Epker
+	email = karepker@gmail.com
+[color]
+	ui = true
+	pager = true
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = red
+[core]
+	editor = vim
+	pager = less -r
+	excludesfile = /home/karepker/.gitignore_global
+	filemode = false
+[push]
+	default = current
+[alias]
+	cam = !git add -A && git commit -m
+	cm = commit -m
+	co = checkout
+	ap = add --patch

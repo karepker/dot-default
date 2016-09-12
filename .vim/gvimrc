@@ -1,0 +1,10 @@
+" Change colorscheme from default to Sunburst.
+colorscheme Sunburst
+
+set columns=180 lines=35
+
+" Set visual aspects of window.
+set guioptions-=T  " Remove toolbar.
+set guioptions-=L  " Remove left scrollbar.
+set guioptions-=R  " Remove right scrollbar.
+set guioptions-=m  " Remove menu bar

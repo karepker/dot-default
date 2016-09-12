@@ -1,0 +1,175 @@
+" Required for Vundle
+set nocompatible
+filetype off
+
+" Set the runtime path to include Vundle and initialize
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Select surrounding delimiters.
+Plugin 'tpope/vim-surround'
+" Repeat custom vim commands.
+Plugin 'tpope/vim-repeat'
+" Easier unix commands for vim.
+Plugin 'tpope/vim-eunuch'
+
+" Custom vim text objects.
+" Base plugin to provide custom text objects.
+Plugin 'kana/vim-textobj-user'
+" Function object mapped to "f/F".
+Plugin 'kana/vim-textobj-function'
+" Segments of camel- or snake-cased words with "v".
+Plugin 'Julian/vim-textobj-variable-segment'
+" Function arguments with ",".
+Plugin 'sgur/vim-textobj-parameter'
+" Comment blocks with "c/C".
+Plugin 'glts/vim-textobj-comment'
+
+" Better C++ highlighting for C++11/14
+Plugin 'octol/vim-cpp-enhanced-highlight'
+
+" Google vim plugins.
+" Google's vim plugin library.
+Plugin 'google/vim-maktaba'
+" Configure google vim plugins.
+Plugin 'google/vim-glaive'
+" Google's code formatting plugin.
+Plugin 'google/vim-codefmt'
+
+" Colorschemes to try.
+Plugin 'sickill/vim-sunburst'
+Plugin 'itchyny/landscape.vim'
+Plugin 'nielsmadan/harlequin'
+
+call vundle#end()
+
+" Apply settings based on filetype.
+filetype plugin indent on " required for Vundle
+
+" Set syntax on.
+syntax on
+
+" Get the user's vim files directory.
+if !exists('g:vimfiles_directory')
+	let vimrc_path = fnamemodify(expand("$MYVIMRC"), ":p:h")
+	if has('unix')
+	  let g:vimfiles_directory = vimrc_path . "/" .".vim"
+	elseif has('win32')
+	  let g:vimfiles_directory = vimrc_path . "/" ."vimfiles"
+	endif
+endif
+
+" Default indent settings.
+set autoindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+" Set split locations.
+set splitright  " Split to the right with vertical split.
+set nosplitbelow  " Split above with horizontal split.
+
+" Read files automatically from disk when they are changed (for git).
+set autoread
+
+" Change directory to the directory of the current buffer.
+set autochdir
+
+" Spell settings.
+set spelllang=en_us  " Language should be English.
+let &spellfile=g:vimfiles_directory . "/spell/en.utf-8.add"
+
+" Turn on line numbering and relative numbering.
+set number
+set relativenumber
+
+" Set the location for vim's backup files.
+set directory=~/.vimbackup,.
+
+" Disable all beeping by setting visualbell with no effect.
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
+" Case insensitive search except when an uppercase letter is included.
+set ignorecase
+set smartcase
+set incsearch  " Search while typing.
+
+" Don't Highlight search
+set nohlsearch
+
+" Control text appearance
+set nolinebreak
+set textwidth=80
+set formatoptions+=t
+
+" Only one space after a period when reflowing.
+set nojoinspaces
+
+" Turn on cursorline
+set cursorline
+
+" Remap "Y" to behave consistently with "C" and "D" commands.
+nnoremap Y y$
+
+" Create normal mode shortcuts to insert new line below/above while remaining in
+" normal mode.
+nnoremap <Enter> o<Esc>k
+nnoremap <S-Enter> O<Esc>j
+
+" Easy access to editing common buffers.
+" Open vimrc in a new tab by default.
+nnoremap <leader>rv :tabedit $MYVIMRC<CR>
+" Open gvimrc in a new vsplit by default (assuming vimrc is open in the other).
+nnoremap <leader>rg :vsplit $MYGVIMRC<CR>
+
+" Open current buffer in a horizontal split.
+nnoremap ss :split %<CR>
+" Open current buffer in a horizontal split.
+nnoremap vv :vsplit %<CR>
+
+" :Q means :q
+command Q :q
+
+" Function to reload configuration files.
+if !exists("*ReloadConfig")
+	function ReloadConfig()
+		source $MYVIMRC
+		if has('gui_running')
+			source $MYGVIMRC
+		endif
+	endfunction
+	nnoremap <leader>sv :call ReloadConfig()<CR>
+endif
+
+" Reload vimrc automatically when it is saved.
+augroup autoreload_config
+    autocmd!
+    autocmd BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc
+		\ call ReloadConfig()
+augroup END
+
+" Highlight text that goes over 80 characters
+if exists('+colorcolumn')
+	set colorcolumn=+1  " same column as textwidth
+else
+	augroup highlight_long_lines
+		autocmd!
+		autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+	augroup END
+endif
+
+" Change colorscheme from default to ron.
+colorscheme ron
+
+" Highlight EOL whitespace, http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight default ExtraWhitespace ctermbg=darkred guibg=#382424
+augroup highlight_extra_whitespace
+	autocmd!
+	autocmd ColorScheme * highlight ExtraWhitespace ctermbg=yellow guibg=yellow
+	autocmd BufRead * match ExtraWhitespace /\s\+$/
+
+	" The above flashes annoyingly while typing, be calmer in insert mode.
+	autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+	autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+augroup END
