@@ -11,7 +11,7 @@
 (setq sentence-end-double-space nil)
 
 ;; Turn off scrolling the window horizontally.
-(setq-default auto-hscroll-mode nil)
+(setq-default auto-hscroll-mode t)
 
 (custom-set-variables '(inhibit-startup-screen t))
 
