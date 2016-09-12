@@ -5,6 +5,7 @@
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/"))
 
 ;; Load all locally installed plugins from subdirectories.
+;; Courtesy: https://www.emacswiki.org/emacs/LoadPath
 (let ((default-directory "~/.emacs.d/plugin/"))
   (normal-top-level-add-subdirs-to-load-path))
 
