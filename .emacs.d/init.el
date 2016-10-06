@@ -9,7 +9,7 @@
 (let ((default-directory "~/.emacs.d/plugin/"))
   (normal-top-level-add-subdirs-to-load-path))
 
-(setq package-enable-at-startup)
+(setq package-enable-at-startup t)
 (package-initialize)
 
 (defun load-directory (directory)
