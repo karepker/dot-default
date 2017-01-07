@@ -1,4 +1,5 @@
 (require 'evil)
+(require 'evil-args)
 (require 'evil-surround)
 (require 'evil-tabs)
 
@@ -32,6 +33,10 @@
 
 ;; Custom text object to select word segments.
 (define-and-bind-text-object "v" "[_\s[:upper:]]" "[_\s[:upper:]]")
+
+;; Create a text object for arguments in Evil.
+(define-key evil-inner-text-objects-map "," 'evil-inner-arg)
+(define-key evil-outer-text-objects-map "," 'evil-outer-arg)
 
 ;; Functions to insert newline above/below then return.
 (defun insert-newline-below ()
