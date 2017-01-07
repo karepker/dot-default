@@ -1,4 +1,5 @@
 (require 'fill-column-indicator)
+(require 'whitespace)
 
 ;; Add ability to use custom themes.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/theme/")
@@ -46,3 +47,6 @@
 (define-globalized-minor-mode global-fci-mode fci-mode turn-on-fci-mode)
 (global-fci-mode t)
 
+;; Show trailing whitespace and long lines.
+(global-whitespace-mode t)
+(setq-default whitespace-style (quote (face trailing lines)))
