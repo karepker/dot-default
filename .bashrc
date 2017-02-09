@@ -24,8 +24,9 @@ if [[ -d ${HOME}/path ]]; then
 fi
 
 # Ruby additions to $PATH.
-if [[ -d ${HOME}/.gem/ruby/2.3.0/bin ]]; then
-	PATH=${PATH}:${HOME}/.gem/ruby/2.3.0/bin
+GEMS_PATH=".gem/ruby/2.4.0/bin"
+if [[ -d "${HOME}/${GEMS_PATH}" ]]; then
+	PATH=${PATH}:"${HOME}/${GEMS_PATH}"
 fi
 
 [[ -f ${HOME}/links/third_party/git-completion.bash ]] && \
