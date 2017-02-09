@@ -4,3 +4,4 @@
 (add-to-list 'auto-mode-alist
             '("\\(?:Brewfile\\|Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))
 (setq ruby-indent-level 2)
+(setq evil-shift-width ruby-indent-level)
