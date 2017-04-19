@@ -11,7 +11,7 @@
 [core]
 	editor = vim
 	pager = less -r
-	excludesfile = /home/karepker/.gitignore_global
+	excludesfile = /home/karepker/.config/git/ignore_global
 	filemode = false
 [push]
 	default = current
