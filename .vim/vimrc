@@ -131,7 +131,7 @@ nnoremap ss :split %<CR>
 nnoremap vv :vsplit %<CR>
 
 " :Q means :q
-command Q :q
+command! Q :q
 
 " Function to reload configuration files.
 if !exists("*ReloadConfig")
