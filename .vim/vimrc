@@ -2,9 +2,11 @@
 set nocompatible
 filetype off
 
-" Set the runtime path to include Vundle and initialize
+" Set the runtime path to include Vundle and initialize.
 set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Install to a non-standard directory because storing this in Dropbox messes up
+" all the permissions.
+call vundle#begin('~/.vundle')
 
 " Select surrounding delimiters.
 Plugin 'tpope/vim-surround'
