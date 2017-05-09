@@ -19,7 +19,10 @@
 (global-auto-revert-mode t)
 
 ;; Backup files settings.
-(setq backup-directory-alist '(("." . "~/.emacs.d/backup")))
+(setq make-backup-files nil)
+
+;; Autosave files settings.
+(setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t)))
 
 ;; Include underscore as part of a word.
 (modify-syntax-entry ?_ "w")
