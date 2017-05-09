@@ -85,7 +85,7 @@ let &spellfile=g:vimfiles_directory . "/spell/en.utf-8.add"
 set number
 set relativenumber
 
-" Set the location for vim's backup files.
+" Set the location for vim's swap files.
 set directory=~/.vimbackup,.
 
 " Disable all beeping by setting visualbell with no effect.
