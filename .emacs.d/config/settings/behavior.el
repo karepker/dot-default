@@ -32,3 +32,7 @@
 ;; No tabs!
 (setq-default indent-tabs-mode nil)
 
+;; Auto-insert text into files.
+(add-hook 'find-file-hook 'auto-insert)
+(setq auto-insert-query nil)
+(setq auto-insert-directory "~/.emacs.d/template/")
