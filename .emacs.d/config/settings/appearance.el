@@ -30,9 +30,7 @@
   (unless (assoc 'font default-frame-alist)
     (let* ((font-family (catch 'break
                           (dolist (font-family
-                                   '("Inconsolata-g"
-                                     "Inconsolata-g"
-                                     "DejaVu Sans Mono"
+                                   '("DejaVu Sans Mono"
                                      "Monospace"))
                             (when (member font-family (font-family-list))
                               (throw 'break font-family)))))
