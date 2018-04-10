@@ -24,7 +24,7 @@ if [[ -d ${HOME}/path ]]; then
 fi
 
 # Ruby additions to $PATH.
-GEMS_PATH=".gem/ruby/2.4.0/bin"
+GEMS_PATH=".gem/ruby/2.5.0/bin"
 if [[ -d "${HOME}/${GEMS_PATH}" ]]; then
 	PATH=${PATH}:"${HOME}/${GEMS_PATH}"
 fi
