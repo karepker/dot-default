@@ -1,56 +1,3 @@
-" Required for Vundle
-set nocompatible
-filetype off
-
-" Set the runtime path to include Vundle and initialize.
-set runtimepath+=~/.vim/bundle/Vundle.vim
-" Install to a non-standard directory because storing this in Dropbox messes up
-" all the permissions.
-call vundle#begin('~/.vundle')
-
-" Let vundle manage itself.
-Plugin 'VundleVim/Vundle.vim'
-
-" Select surrounding delimiters.
-Plugin 'tpope/vim-surround'
-" Repeat custom vim commands.
-Plugin 'tpope/vim-repeat'
-" Easier unix commands for vim.
-Plugin 'tpope/vim-eunuch'
-
-" Custom vim text objects.
-" Base plugin to provide custom text objects.
-Plugin 'kana/vim-textobj-user'
-" Function object mapped to "f/F".
-Plugin 'kana/vim-textobj-function'
-" Segments of camel- or snake-cased words with "v".
-Plugin 'Julian/vim-textobj-variable-segment'
-" Function arguments with ",".
-Plugin 'sgur/vim-textobj-parameter'
-" Comment blocks with "c/C".
-Plugin 'glts/vim-textobj-comment'
-
-" Better C++ highlighting for C++11/14
-Plugin 'octol/vim-cpp-enhanced-highlight'
-
-" Google vim plugins.
-" Google's vim plugin library.
-Plugin 'google/vim-maktaba'
-" Configure google vim plugins.
-Plugin 'google/vim-glaive'
-" Google's code formatting plugin.
-Plugin 'google/vim-codefmt'
-
-" Colorschemes to try.
-Plugin 'sickill/vim-sunburst'
-Plugin 'itchyny/landscape.vim'
-Plugin 'nielsmadan/harlequin'
-
-call vundle#end()
-
-" Apply settings based on filetype.
-filetype plugin indent on " required for Vundle
-
 " Set syntax on.
 syntax on
 
@@ -168,10 +115,6 @@ else
 		autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 	augroup END
 endif
-
-" Change colorscheme from default to ron.
-set background=dark
-colorscheme Sunburst
 
 " Highlight EOL whitespace, http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 highlight default ExtraWhitespace ctermbg=darkred guibg=#382424
