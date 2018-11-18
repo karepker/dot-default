@@ -20,3 +20,5 @@
 	cm = commit -m
 	co = checkout
 	ap = add --patch
+[diff]
+	tool = gvimdiff
