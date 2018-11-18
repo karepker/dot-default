@@ -13,17 +13,17 @@ if [[ -d ${HOME}/.bash.d ]]; then
 	shopt -s nullglob
 
 	# Source aliases.
-    for f in ${HOME}/.bash.d/alias_*.bash; do
+    for f in ${HOME}/.bash.d/alias/*.bash; do
         . "$f"
     done
 
 	# Source exports.
-    for f in ${HOME}/.bash.d/export_*.bash; do
+    for f in ${HOME}/.bash.d/export/*.bash; do
         . "$f"
     done
 
 	# Add custom directories to path.
-    for f in ${HOME}/.bash.d/path_*.bash; do
+    for f in ${HOME}/.bash.d/path/*.bash; do
 		while read line; do
 			path="${line/#\~/$HOME}"
 			[[ -d "$path" ]] && export PATH="${PATH}:$path"
