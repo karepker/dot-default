@@ -9,14 +9,23 @@ PROMPT_COMMAND='echo -ne "\033]0; ${PWD##*/}\007"'
 
 # Modularize bash settings.
 if [[ -d ${HOME}/.bash.d ]]; then
+	# We want nullglob so iterating over an empty list isn't an error.
+	shopt -s nullglob
+
+	# Source aliases.
     for f in ${HOME}/.bash.d/alias_*.bash; do
         . "$f"
     done
-fi
 
-export EDITOR=vim
-export GCC_COLORS=true
-export LESS="-R"
+	# Source exports.
+    for f in ${HOME}/.bash.d/export_*.bash; do
+        . "$f"
+    done
+
+	# Unset nullglob because it can be weird:
+	# https://unix.stackexchange.com/a/204944
+	shopt -u nullglob
+fi
 
 # Personal additions to $PATH.
 if [[ -d ${HOME}/path ]]; then
