@@ -9,8 +9,8 @@ PROMPT_COMMAND='echo -ne "\033]0; ${PWD##*/}\007"'
 
 # Modularize bash settings.
 if [[ -d ${HOME}/.bash.d ]]; then
-    for f in ${HOME}/.bash.d/*; do
-        . $f
+    for f in ${HOME}/.bash.d/alias_*.bash; do
+        . "$f"
     done
 fi
 
