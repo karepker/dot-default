@@ -22,6 +22,14 @@ if [[ -d ${HOME}/.bash.d ]]; then
         . "$f"
     done
 
+	# Add custom directories to path.
+    for f in ${HOME}/.bash.d/path_*.bash; do
+		while read line; do
+			path="${line/#\~/$HOME}"
+			[[ -d "$path" ]] && export PATH="${PATH}:$path"
+		done < "$f"
+    done
+
 	# Unset nullglob because it can be weird:
 	# https://unix.stackexchange.com/a/204944
 	shopt -u nullglob
@@ -30,12 +38,6 @@ fi
 # Personal additions to $PATH.
 if [[ -d ${HOME}/path ]]; then
 	PATH=${HOME}/path:${PATH}
-fi
-
-# Ruby additions to $PATH.
-GEMS_PATH=".gem/ruby/2.5.0/bin"
-if [[ -d "${HOME}/${GEMS_PATH}" ]]; then
-	PATH=${PATH}:"${HOME}/${GEMS_PATH}"
 fi
 
 [[ -f ${HOME}/links/third_party/git-completion.bash ]] && \
