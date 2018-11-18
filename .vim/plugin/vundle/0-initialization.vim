@@ -5,11 +5,11 @@
 " Files correspond to:
 "
 " * 0-initialization.vim (this file): Mandatory Vundle initialization.
-" * {1-9}-*.vim: Vundle plugins to load.
+" * [1-8]-*.vim: Vundle plugins to load.
 " * 9-termination.vim: Mandatory Vundle termination steps.
 "
 " Because vim will load files in lexicographic order, users may sequence plugin
-" loads by putting them in higher numbered [1-9]-*.vim files. Plugin loads may
+" loads by putting them in higher numbered [1-8]-*.vim files. Plugin loads may
 " also be sequenced as they usually are: by line number within a file.
 "
 " This 'plugin' contains all mandatory Vundle intialization.
