@@ -116,7 +116,7 @@ set formatoptions+=t
 " Only one space after a period when reflowing.
 set nojoinspaces
 
-" Turn on cursorline
+" Turn on cursorline.
 set cursorline
 
 " Remap "Y" to behave consistently with "C" and "D" commands.
@@ -170,7 +170,8 @@ else
 endif
 
 " Change colorscheme from default to ron.
-colorscheme ron
+set background=dark
+colorscheme Sunburst
 
 " Highlight EOL whitespace, http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 highlight default ExtraWhitespace ctermbg=darkred guibg=#382424
