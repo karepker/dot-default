@@ -30,6 +30,16 @@ if [[ -d ${HOME}/.bash.d ]]; then
 		done < "$f"
     done
 
+	# Source completions.
+	# The bash-completion default script has a default location for sourcing
+	# completions, see https://github.com/scop/bash-completion#faq, but not
+	# every environment I'm using has a version of the bash-completion package
+	# with this feature, so hold completions in this additional directory as
+	# well.
+    for f in ${HOME}/.bash.d/completion/*.bash; do
+        . "$f"
+    done
+
 	# Unset nullglob because it can be weird:
 	# https://unix.stackexchange.com/a/204944
 	shopt -u nullglob
@@ -39,6 +49,3 @@ fi
 if [[ -d ${HOME}/path ]]; then
 	PATH=${HOME}/path:${PATH}
 fi
-
-[[ -f ${HOME}/links/third_party/git-completion.bash ]] && \
-	. ${HOME}/links/third_party/git-completion.bash
