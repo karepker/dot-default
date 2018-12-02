@@ -22,3 +22,5 @@
 	ap = add --patch
 [diff]
 	tool = gvimdiff
+[difftool]
+	prompt = false
