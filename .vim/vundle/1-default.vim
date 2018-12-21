@@ -4,6 +4,8 @@
 Plugin 'tpope/vim-surround'
 " Repeat custom vim commands.
 Plugin 'tpope/vim-repeat'
+" Easier word manipulations.
+Plugin 'tpope/vim-abolish'
 " Easier unix commands for vim.
 Plugin 'tpope/vim-eunuch'
 
