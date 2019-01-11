@@ -19,6 +19,12 @@ endfunction
 " gets modified, but I can't run any of the commands the plugins define.
 call SourceDirectory(g:vimfiles_directory . '/vundle/')
 
+" Set mapleader and maplocalleader for <leader> and <localleader>.
+let maplocalleader=','
+" It's the same as the default value but set it for the sake of completeness and
+" so :echo mapleader works.
+let mapleader='\\'
+
 " Default indent settings.
 set autoindent
 set tabstop=4
