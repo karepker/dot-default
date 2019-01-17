@@ -12,3 +12,8 @@ zstyle :compinstall filename '/home/karepker/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+export ZSH=/usr/share/oh-my-zsh/
+ZSH_THEME="robbyrussell"
+
+source $ZSH/oh-my-zsh.sh
