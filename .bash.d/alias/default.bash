@@ -5,7 +5,7 @@ alias cgrep='grep --color=auto -RIn'
 alias lessr='less -R'
 
 # Change into the canonical directory name
-alias cdc='cd $(pwd -P)'
+alias cdc='cd "$(pwd -P)"'
 
 alias soba="source ${HOME}/.bashrc"
 
