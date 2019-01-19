@@ -33,6 +33,15 @@ export ZSH_CUSTOM=${ZSH_PERSONAL}/custom
 ZSH_THEME="robbyrussell"
 
 source $ZSH/oh-my-zsh.sh
+#
+# Hooks
+#
+
+# Runs before every prompt.
+# Inspiration: https://github.com/robbyrussell/oh-my-zsh/issues/5700#issuecomment-316111109
+function precmd () {
+	echo -ne "\033]0; ${PWD##*/}\007"
+}
 
 #
 # Environment variables
