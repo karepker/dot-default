@@ -83,3 +83,7 @@ if [[ "$(uname -s)" != "Darwin" ]]; then
 	alias gvim='mvim'
 fi
 
+#
+# PATH management
+#
+path+=${HOME}/bin

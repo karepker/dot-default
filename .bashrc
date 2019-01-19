@@ -46,6 +46,6 @@ if [[ -d ${HOME}/.bash.d ]]; then
 fi
 
 # Personal additions to $PATH.
-if [[ -d ${HOME}/path ]]; then
-	PATH=${HOME}/path:${PATH}
+if [[ -d ${HOME}/bin ]]; then
+	PATH=${HOME}/bin:${PATH}
 fi
