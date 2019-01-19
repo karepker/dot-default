@@ -95,4 +95,5 @@ fi
 #
 # PATH management
 #
+typeset -U path
 path+=${HOME}/bin
