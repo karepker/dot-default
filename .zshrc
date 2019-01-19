@@ -14,6 +14,8 @@ compinit
 # End of lines added by compinstall
 
 export ZSH=/usr/share/oh-my-zsh
+export ZSH_PERSONAL=${HOME}/.config/zsh
+export ZSH_CUSTOM=${ZSH_PERSONAL}/custom
 ZSH_THEME="robbyrussell"
 
 source $ZSH/oh-my-zsh.sh
