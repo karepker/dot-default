@@ -81,13 +81,13 @@ alias ghostscript='/usr/bin/gs'
 alias ed='gvim'
 
 # Aliases only useful on GNU/Linux platforms.
-if [[ "$(uname -s)" != "Linux" ]]; then
+if [[ "$(uname -s)" == "Linux" ]]; then
 	alias ls='ls --color=auto'
 	alias open='xdg-open' # `open` like OS X
 fi
 
 # Aliases only useful on macOS platforms.
-if [[ "$(uname -s)" != "Darwin" ]]; then
+if [[ "$(uname -s)" == "Darwin" ]]; then
 	alias ls='ls -Ghf'
 	alias gvim='mvim'
 fi
