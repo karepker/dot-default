@@ -1,3 +1,11 @@
+# The bulk of my zsh setup.
+#
+# Anything that is common to all my environments can go here, the only exception
+# is stuff that needs not to exist in a certain environment.
+#
+# This file should be sourced by each leaf environment's specific .zshrc file
+# first, then any settings in it can be overwritten as necessary.
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.cache/zsh_history
 HISTSIZE=1000
