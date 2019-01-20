@@ -25,14 +25,12 @@ autoload -Uz compinit
 compinit
 
 #
-# oh-my-zsh setup.
+# Appearance
 #
-export ZSH=/usr/share/oh-my-zsh
-export ZSH_PERSONAL=${HOME}/.config/zsh
-export ZSH_CUSTOM=${ZSH_PERSONAL}/custom
-ZSH_THEME="robbyrussell"
 
-source $ZSH/oh-my-zsh.sh
+PROMPT='%F{green}%#%f '
+RPROMPT='%F{blue}%m%f:%F{yellow}%~%f  '
+
 #
 # Hooks
 #
