@@ -8,6 +8,8 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-abolish'
 " Easier unix commands for vim.
 Plugin 'tpope/vim-eunuch'
+" Common matching commands.
+Plugin 'tpope/vim-unimpaired'
 
 " Custom vim text objects.
 " Base plugin to provide custom text objects.

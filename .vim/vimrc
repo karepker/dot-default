@@ -83,11 +83,6 @@ set cursorline
 " Remap "Y" to behave consistently with "C" and "D" commands.
 nnoremap Y y$
 
-" Create normal mode shortcuts to insert new line below/above while remaining in
-" normal mode.
-nnoremap <Enter> o<Esc>k
-nnoremap <S-Enter> O<Esc>j
-
 " Easy access to editing common buffers.
 " Open vimrc in a new tab by default.
 nnoremap <leader>rv :tabedit $MYVIMRC<CR>
