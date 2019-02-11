@@ -11,6 +11,9 @@ Plugin 'tpope/vim-eunuch'
 " Common matching commands.
 Plugin 'tpope/vim-unimpaired'
 
+" Custom text snippets.
+Plugin 'SirVer/ultisnips'
+
 " Custom vim text objects.
 " Base plugin to provide custom text objects.
 Plugin 'kana/vim-textobj-user'
