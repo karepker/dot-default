@@ -21,9 +21,9 @@ call SourceDirectory(g:vimfiles_directory . '/vundle/')
 
 " Set mapleader and maplocalleader for <leader> and <localleader>.
 let maplocalleader=','
-" It's the same as the default value but set it for the sake of completeness and
-" so :echo mapleader works.
-let mapleader='\\'
+" This is a thing people do!
+" https://www.reddit.com/r/vim/comments/484isa/why_i_use_space_as_my_vim_leader_key/
+let mapleader=' '
 
 " Default indent settings.
 set autoindent
@@ -39,8 +39,12 @@ set equalalways  " Make splits always equal in size.
 " Read files automatically from disk when they are changed (for git).
 set autoread
 
-" Change directory to the directory of the current buffer.
-set autochdir
+" Open files in relative directories.
+" Inspired by https://stackoverflow.com/a/1708936.
+set noautochdir
+nnoremap <leader>e :e <C-R>=expand('%:p:h') . '/' <CR>
+nnoremap <leader>t :tabe <C-R>=expand('%:p:h') . '/' <CR>
+nnoremap <leader>s :split <C-R>=expand('%:p:h') . '/' <CR>
 
 " Spell settings.
 set spelllang=en_us  " Language should be English.
