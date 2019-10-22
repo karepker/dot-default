@@ -98,6 +98,8 @@ nnoremap <leader>rg :vsplit $MYGVIMRC<CR>
 nnoremap ss :split %<CR>
 " Open current buffer in a vertical split.
 nnoremap vv :vsplit %<CR>
+" Open current buffer in a new tab.
+nnoremap tt :tabedit %<CR>
 
 " :Q means :q
 command! Q :q
