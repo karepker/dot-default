@@ -5,3 +5,4 @@
 
 # Vim
 .vim/bundle/
+.vim/spell/*.spl
