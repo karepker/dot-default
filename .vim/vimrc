@@ -56,7 +56,7 @@ set number
 set relativenumber
 
 " Set the location for vim's swap files.
-set directory=~/.vimbackup,.
+set directory=~/.cache/vim/swap//,.
 
 " Disable all beeping by setting visualbell with no effect.
 set noerrorbells visualbell t_vb=
