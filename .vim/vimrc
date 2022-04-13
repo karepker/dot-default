@@ -85,6 +85,9 @@ set nojoinspaces
 " Turn on cursorline.
 set cursorline
 
+" View command line completion options in menu.
+set wildmenu
+
 " Remap "Y" to behave consistently with "C" and "D" commands.
 nnoremap Y y$
 
