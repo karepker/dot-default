@@ -24,3 +24,5 @@
 	tool = gvimdiff
 [difftool]
 	prompt = false
+[init]
+	defaultBranch = main
