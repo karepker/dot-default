@@ -62,12 +62,6 @@ alias cdc='cd "$(pwd -P)"'
 # compatibility
 alias soba="source ${HOME}/.zshrc"
 
-# For compiling C++ code, options that I use every time.
-alias g++='g++ -Wall -Wextra -Werror -pedantic-errors -std=c++14'
-alias clang++='clang++ -Wall -Wextra -Werror -pedantic-errors -std=c++14'
-
-alias pylint='pylint --extension-pkg-whitelist=numpy'
-
 # I'm not used to the zsh git plugin aliases.
 alias gs='git status'  # Take precedence over ghostscript `gs` command.
 alias gb='git branch'
