@@ -29,7 +29,7 @@ compinit
 #
 
 PROMPT='%F{green}%#%f '
-RPROMPT='%F{blue}%m%f:%F{yellow}%~%f  '
+RPROMPT='%F{cyan}%m%f:%F{yellow}%~%f  '
 
 #
 # Hooks
