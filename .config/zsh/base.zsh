@@ -41,6 +41,14 @@ function precmd () {
 	echo -ne "\033]0; ${PWD##*/}\007"
 }
 
+# Bash style word selection, so C-W doesn't delete an entire path but only each
+# individual directory.
+# Inspiration:
+# https://zsh.sourceforge.io/Doc/Release/User-Contributions.html#Widgets via
+# https://stackoverflow.com/a/1438523.
+autoload -U select-word-style
+select-word-style bash
+
 #
 # Environment variables
 #
