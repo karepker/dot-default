@@ -43,7 +43,7 @@ RPROMPT='%F{cyan}%m%f:%F{yellow}%~%f  '
 function precmd () {
 	# Append history to a full history log, inspired by
 	# https://www.jefftk.com/p/logging-shell-history-in-zsh.
-	echo "$(date --iso-8601=seconds) $(hostname):$PWD $(history -1)" \
+	echo "$(date -Iseconds) $(hostname):$PWD $(history -1)" \
 		      >> ~/.cache/zsh_full_history
 	echo -ne "\033]0; ${PWD##*/}\007"
 }
