@@ -59,7 +59,8 @@ select-word-style bash
 #
 # Environment variables
 #
-export EDITOR=vim
+# Determine editor based on whether we have access to a display.
+export EDITOR="$(if [ -z $DISPLAY ]; then echo "vim"; else echo "gvim"; fi)"
 export GCC_COLORS=true
 export LESS='-R'
 
@@ -85,7 +86,7 @@ alias gd='git difftool'
 # Makes ghostscript callable.
 alias ghostscript='/usr/bin/gs'
 
-alias ed='gvim'
+alias ed="$EDITOR"
 
 #
 # PATH management
