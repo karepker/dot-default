@@ -72,6 +72,9 @@ set nojoinspaces
 " Turn on cursorline.
 set cursorline
 
+" Always show status bar with file name.
+set laststatus=2
+
 " View command line completion options in menu.
 set wildmenu
 
