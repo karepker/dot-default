@@ -1,8 +1,0 @@
-# Emacs
-.emacs.d/session.*
-.emacs.d/backup/
-.emacs.d/elpa/
-
-# Vim
-.vim/bundle/
-.vim/spell/*.spl
