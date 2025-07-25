@@ -75,6 +75,9 @@ set cursorline
 " Always show status bar with file name.
 set laststatus=2
 
+" Allow switching off buffers that have been modified but not saved.
+set hidden
+
 " View command line completion options in menu.
 set wildmenu
 
