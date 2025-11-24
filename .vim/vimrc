@@ -63,7 +63,6 @@ nnoremap <esc>^[ <esc>^[
 
 " Control text appearance.
 set nolinebreak
-set textwidth=80
 set formatoptions+=t
 
 " Only one space after a period when reflowing.
