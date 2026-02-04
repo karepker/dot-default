@@ -117,15 +117,8 @@ augroup autoreload_config
 		\ call ReloadConfig()
 augroup END
 
-" Highlight text that goes over 80 characters
-if exists('+colorcolumn')
-	set colorcolumn=+1  " same column as textwidth
-else
-	augroup highlight_long_lines
-		autocmd!
-		autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-	augroup END
-endif
+" By default soft-wrap text.
+call wrap#SetSoftWrap()
 
 " Highlight EOL whitespace, http://vim.wikia.com/wiki/Highlight_unwanted_spaces
 highlight default ExtraWhitespace ctermbg=darkred guibg=#382424
