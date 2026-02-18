@@ -12,7 +12,7 @@
 	editor = vim
 	pager = less -r
 	excludesfile = /home/karepker/.config/git/ignore_global
-	filemode = false
+	filemode = true
 [push]
 	default = current
 [alias]
