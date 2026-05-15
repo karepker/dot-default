@@ -92,4 +92,4 @@ alias ed="$EDITOR"
 # PATH management
 #
 typeset -U path
-path+=${HOME}/bin
+path+=${HOME}/.local/bin
