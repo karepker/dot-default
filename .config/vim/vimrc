@@ -138,16 +138,3 @@ augroup highlight_extra_whitespace
 	autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 	autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 augroup END
-
-" Source all the vim files in a directory for modular vim configuration.
-" Credit https://devel.tech/snippets/n/vIMvi29n/include-all-vim-files-in-a-directory/
-function! SourceDirectory(directory)
-	for s:fpath in split(globpath(a:directory, '*.vim'), '\n')
-		execute 'source' s:fpath
-	endfor
-endfunction
-
-" For some reason, this works to load vundle plugins, but dropping the
-" equivalent vundle/ directory in .vim/plugin/ doesn't work: the runtimepath
-" gets modified, but I can't run any of the commands the plugins define.
-call SourceDirectory(g:vimfiles_directory . '/vundle/')
