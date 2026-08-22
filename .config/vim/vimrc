@@ -45,6 +45,9 @@ set relativenumber
 " Set the location for vim's swap files.
 set directory=~/.cache/vim/swap//,.
 
+" Set location for netrwhist file.
+let g:netrw_home='~/.cache/vim'
+
 " Disable all beeping by setting visualbell with no effect.
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
@@ -116,6 +119,10 @@ augroup autoreload_config
     autocmd BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc
 		\ call ReloadConfig()
 augroup END
+
+" Change the bad spelling highlighting to underline the word when in terminal.
+highlight clear SpellBad
+highlight SpellBad cterm=underline ctermfg=NONE ctermbg=NONE
 
 " By default soft-wrap text.
 call wrap#SetSoftWrap()

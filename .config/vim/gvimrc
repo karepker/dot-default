@@ -6,5 +6,10 @@ set columns=180 lines=55
 " Set visual aspects of window.
 set guioptions-=T  " Remove toolbar.
 set guioptions-=L  " Remove left scrollbar.
-set guioptions-=R  " Remove right scrollbar.
+set guioptions-=R  " Remove right scrollbar (with vsplit window).
+set guioptions-=r  " Remove right scrollbar.
 set guioptions-=m  " Remove menu bar
+
+" KDE selects some font I don't like unless I do this despite the fact that I
+" have this font set as my system default monospace font.
+set guifont=Monospace
