@@ -1,6 +1,3 @@
-" Change colorscheme from default to Sunburst.
-colorscheme Sunburst
-
 set columns=180 lines=55
 
 " Set visual aspects of window.

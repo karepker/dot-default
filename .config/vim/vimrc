@@ -1,6 +1,10 @@
 " Set syntax on.
 syntax on
 
+" Change colorscheme from default to Sunburst.
+set background=dark
+colorscheme Sunburst
+
 " Get the user's vim files directory.
 if !exists('g:vimfiles_directory')
 	let g:vimfiles_directory = fnamemodify(expand("$MYVIMRC"), ':p:h')
