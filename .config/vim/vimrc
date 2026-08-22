@@ -1,6 +1,9 @@
 " Set syntax on.
 syntax on
 
+" Apply settings based on filetype, so ftplugin/ and indent/ files load.
+filetype plugin indent on
+
 " Change colorscheme from default to Sunburst.
 set background=dark
 colorscheme Sunburst
