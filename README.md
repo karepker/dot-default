@@ -30,7 +30,7 @@ Julian/vim-textobj-variable-segment
 sgur/vim-textobj-parameter
 glts/vim-textobj-comment
 sickill/vim-sunburst
-EO
+EOF
 ```
 
 The `plugin` subdirectory name in the directory above is arbitrary. vim's
